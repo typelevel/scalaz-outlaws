@@ -19,25 +19,25 @@ flamewars about this
 
 ### Try
 
-Try isn't a valid functor. (read about it
-here)[https://issues.scala-lang.org/browse/SI-6284]
+Try isn't a valid functor. [read about it
+here](https://issues.scala-lang.org/browse/SI-6284)
 
 What should you consider using instead?  Instead of:
 
     Try {
-       might throw
+        might throw
     }
 
 Try:
 
     \/.fromTryCatchThrowable {
-	might throw
+        might throw
     }
 
 or perhaps:
 
     Task.delay {
-	might throw
+        might throw
     }
 
 ### Each[A]
@@ -59,4 +59,4 @@ consider:
 
 followed eventually by:
 
-    val didItWord: Throwable \/ Unit = sideEffectingComputation.attemptRun
+    val didItWork: Throwable \/ Unit = sideEffectingComputation.attemptRun
