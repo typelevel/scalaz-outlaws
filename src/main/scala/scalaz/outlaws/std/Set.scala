@@ -1,6 +1,7 @@
-package scalaz.outlaws.std
+package scalaz.outlaws
+package std
 
-import scalaz._
+import scalaz.{Traverse,MonadPlus,Applicative}
 
 trait SetOutlawInstances {
   implicit val setOutlawInstnace: Traverse[Set] with MonadPlus[Set] with Each[Set] =
