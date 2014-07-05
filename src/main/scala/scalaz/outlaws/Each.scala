@@ -1,5 +1,7 @@
 package scalaz.outlaws
 
+import scala.{inline, Unit}
+
 /**
  * Run a side effect once for each `A` in the `F`.
  */

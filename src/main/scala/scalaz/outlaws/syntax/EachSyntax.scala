@@ -1,6 +1,7 @@
 package scalaz.outlaws
 package syntax
 
+import scala.Unit
 import scalaz.Unapply
 
 /** Wraps a value `self` and provides methods related to `Each` */

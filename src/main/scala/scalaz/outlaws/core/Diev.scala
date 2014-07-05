@@ -1,6 +1,7 @@
 package scalaz.outlaws
 package core
 
+import scala.Unit
 import scalaz.Diev
 
 trait DievOutlawInstances {

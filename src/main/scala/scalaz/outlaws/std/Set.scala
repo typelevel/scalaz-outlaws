@@ -1,6 +1,8 @@
 package scalaz.outlaws
 package std
 
+import scala.{Boolean,Unit}
+import scala.Predef.Set
 import scalaz.{Traverse,MonadPlus,Applicative}
 
 trait SetOutlawInstances {

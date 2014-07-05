@@ -1,6 +1,7 @@
 package scalaz.outlaws
 package std
 
+import scala.Unit
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext
 

@@ -1,5 +1,8 @@
 package scalaz.outlaws.std
 
+import java.lang.Exception
+import scala.Predef.String
+import scala.Boolean
 import scala.util.{Success,Try,Failure}
 import scalaz.outlaws.std.utilTry._
 import scalaz.Equal
@@ -10,7 +13,7 @@ import scalaz.scalacheck.ScalazArbitrary._
 import org.scalacheck._
 import org.scalacheck.Arbitrary._
 
-class TrySpec extends Properties("try") {
+class TrySpec extends QuickProperties("try") {
 
   implicit def tryEqual[A : Equal] = new Equal[Try[A]] {
     def equal(a1: Try[A], a2: Try[A]): Boolean = (a1,a2) match {
@@ -25,12 +28,6 @@ class TrySpec extends Properties("try") {
     arbitrary[Boolean] flatMap { b ⇒
       if(b) arbitrary[A].map(Success.apply)
       else arbitrary[String].map(s ⇒ Failure(new Exception(s)))
-    }
-  }
-
-  def checkAll(props: Properties) {
-    for ((name, prop) <- props.properties) yield {
-      property(name) = prop
     }
   }
 
