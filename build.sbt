@@ -14,8 +14,7 @@ scalacOptions ++= Seq(
   "-language:implicitConversions",
   "-language:higherKinds",
   "-Yno-adapted-args",
-  "-Ywarn-value-discard",
-  "-Yno-imports"
+  "-Ywarn-value-discard"
 )
 
 resolvers ++= Seq(Resolver.sonatypeRepo("releases"),
