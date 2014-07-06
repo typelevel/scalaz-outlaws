@@ -32,7 +32,7 @@ flamewars about this
 
 in order to import the Set instances from scalaz-outlaws:
 ``` scala
-import scala.outlaws.std.set._
+import scalaz.outlaws.std.set._
 ```
 
 ### Try
@@ -61,7 +61,7 @@ or perhaps:
 
 in order to import the Try instances from scalaz-outlaws:
 ``` scala
-import scala.outlaws.std.utilTry._
+import scalaz.outlaws.std.utilTry._
 ```
 
 ### Each[A]
