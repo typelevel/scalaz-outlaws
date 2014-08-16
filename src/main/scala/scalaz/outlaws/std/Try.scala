@@ -5,6 +5,7 @@ import scala.util.{Try,Success,Failure}
 import scalaz.{Applicative,Monad,Plus,Traverse}
 
 trait TryOutlawInstances {
+  @deprecated("Functor[Try] breaks the composition law, https://issues.scala-lang.org/browse/SI-6284", "forever")
   implicit val tryOutlawInstances = new Traverse[Try] with Monad[Try] with Plus[Try]{
     def point[A](a: ⇒ A): Try[A] = Success(a)
     override def map[A,B](fa: Try[A])(f: A ⇒ B) = fa map f

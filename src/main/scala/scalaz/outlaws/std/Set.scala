@@ -6,6 +6,7 @@ import scala.Predef.Set
 import scalaz.{Traverse,MonadPlus,Applicative}
 
 trait SetOutlawInstances {
+  @deprecated("Set breaks parametricity: http://failex.blogspot.com/2013/06/fake-theorems-for-free.html", "forever")
   implicit val setOutlawInstnace: Traverse[Set] with MonadPlus[Set] with Each[Set] =
     new Traverse[Set] with MonadPlus[Set] with Each[Set] {
 
