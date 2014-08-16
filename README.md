@@ -20,7 +20,7 @@ resolvers += "Scalaz Bintray Repo" at "http://dl.bintray.com/stew/snapshots"
 And add the library dependency:
 
 ``` scala
-libraryDependencies += "org.typelevel" %% "scalaz-outlaws" % "0.1"
+libraryDependencies += "org.typelevel" %% "scalaz-outlaws" % "0.2"
 ```
 
 ## What is here and why?
