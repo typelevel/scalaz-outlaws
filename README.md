@@ -86,15 +86,17 @@ followed eventually by:
     val didItWork: Throwable \/ Unit = sideEffectingComputation.attemptRun
 ```
 
-### Monoid[Double]
+### Monoid[Double] — Monoid[Float]
 
-scalaz doesn't have a monoid instance for double since you cannot
-count on + operations on double to be associative.
+scalaz doesn't have a monoid instance for Double/Float since you cannot
+count on + operations on Double/Float to be associative.
 
 ```scala
 
 import scalaz.outlaws.std.double._
+import scalaz.outlaws.std.float._
 import scalaz.syntax.monoid._
 
 val x: Double = 1D |+| 2D
+val y: Float = 1F |+| 2F
 ```
