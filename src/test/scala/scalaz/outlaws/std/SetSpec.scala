@@ -12,7 +12,6 @@ import scalaz.scalacheck.ScalazArbitrary._
 import org.scalacheck._
 import Arbitrary._
 
-
 class SetSpec extends QuickProperties("set") {
   checkAll(monadPlus.laws[Set])
   checkAll(traverse.laws[Set])

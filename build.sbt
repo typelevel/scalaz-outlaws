@@ -21,8 +21,8 @@ resolvers ++= Seq(Resolver.sonatypeRepo("releases"),
                   Resolver.sonatypeRepo("snapshots"))
 
 libraryDependencies ++= Seq(
-  "org.scalaz"         %% "scalaz-core"               % "7.1.0-RC1",
-  "org.scalaz"         %% "scalaz-scalacheck-binding" % "7.1.0-RC1"  % "test")
+  "org.scalaz"         %% "scalaz-core"               % "7.1.1",
+  "org.scalaz"         %% "scalaz-scalacheck-binding" % "7.1.1"  % "test")
 
 seq(bintraySettings:_*)
 
